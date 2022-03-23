@@ -19,7 +19,7 @@ const postUsers = async (req, res, next) => {
       });
     }
 
-    props.avatar = 1;
+    props.avatar = getRandomInt(1, 10);
 
     const [user] = await User.create(props);
 
